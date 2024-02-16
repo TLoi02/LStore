@@ -7,5 +7,49 @@
                 <a class="banner__btn" routerLink="/about">About Us</a>
             </div>
         </div>
+        <div class="content_wrap">
+            <div class="row">
+                <div class="col-lg-9 col-md-8 col-sm-12">
+                    <div class="content">
+                        <div class="content__search">
+                            <input type="text" placeholder="Search by company, skill,...">
+                        </div>
+                        <h1 style="margin: 20px 0; font-weight: bold;">Recent jobs</h1>
+                        <div>
+                            <div class="job-item" routerLink="/career/1">
+                                <div class="job-content">
+                                    <div class="job-logo">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png" alt="logo">
+                                    </div>
+                                    <div class="job-text">
+                                        <div class="job-tag">
+                                            <p>Desgin</p>
+                                        </div>
+                                        <div class="job-title">
+                                            <h2>Product Designer</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="job-date">
+                                    <p style="margin-right: 5px;">Posted at</p>
+                                    <p>11/08/2002</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <div class="filter-wrap">
+                        <h2 style="text-align: center;">Specialties</h2>
+                        <mat-checkbox class="checkbox" *ngFor="let item of items" [(ngModel)]="item.checked">
+                            {{ item.label }}
+                        </mat-checkbox>
+                        <div style="display: flex; justify-content: center;">
+                            <button class="banner__btn" style="padding: 5px 25px;">Filter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

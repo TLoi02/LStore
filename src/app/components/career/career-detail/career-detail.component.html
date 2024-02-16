@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="btn-all" routerLink="/career">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+        <p style="margin-top: 10px;">All jobs</p>
+    </div>
+    <div class="row">
+        <div class="col-lg-9 col-md-8 col-sm-12">
+            <div class="job-content">
+                <div class="job-desc">
+                    Job Details
+                </div>
+                <div class="job-title">
+                    <h1 style="font-weight: bold;">Product Designer</h1>
+                </div>
+                <div class="share">
+                    <div class="share-item" (click)="handleQRCode()">
+                        <div class="share-item__logo">
+                            <mat-icon>perm_device_information</mat-icon>
+                        </div>
+                        <div class="share-item__text">
+                            QR Code
+                        </div>
+                    </div>
+                    <div class="share-item" (click)="handleCopyLink()">
+                        <div class="share-item__logo">
+                            <mat-icon>code</mat-icon>
+                        </div>
+                        <div class="share-item__text">
+                            Copy
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quo, reiciendis doloremque voluptates in nesciunt hic ducimus soluta blanditiis vero accusamus vel velit placeat expedita exercitationem odio nisi distinctio animi.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-12">
+            <div class="job-handle">
+                <div class="job-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png" alt="logo">
+                </div>
+                <div class="job-tag">
+                    <h1 style="font-weight: bold;">Design</h1>
+                </div>
+                <div class="job-date">
+                    <p>11/08/2002</p>
+                </div>
+                <div class="btn-custom" (click)="openApplyDialog()">
+                    Aplly this position
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

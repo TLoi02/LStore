@@ -1,0 +1,69 @@
+
+.btn-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 4px 20px;
+    background-color: rgb(214, 207, 207);
+    width: 130px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+.job-handle{
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.job-logo img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.btn-custom{
+    padding: 10px 25px;
+    background-color: #0d0c22;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.job-content{
+
+}
+.job-desc{
+
+}
+.job-title{
+
+}
+.share{
+    display: flex;
+    margin-bottom: 20px;
+}
+.share-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: .5px solid grey;
+    border-radius: 20px;
+    width: 130px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+.share-item:hover{
+    background-color: rgb(209, 207, 203);
+}
+.qr-code{
+    display: flex;
+    align-items: center;
+}
+.btn-custom.download{
+    width: 130px;
+    text-align: center;
+}

@@ -7,6 +7,8 @@ import { CareerComponent } from './components/career/career.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { CareerDetailComponent } from './components/career/career-detail/career-detail.component';
 
 const routes: Routes = [
   { 
@@ -18,6 +20,8 @@ const routes: Routes = [
       { path: 'about', component: AboutComponent }, 
       { path: 'login', component: LoginComponent }, 
       { path: 'sign-up', component: SignUpComponent }, 
+      { path: 'forget-password', component: ForgetPasswordComponent }, 
+      { path: 'career/:id', component: CareerDetailComponent },
     ]
   }
 ];

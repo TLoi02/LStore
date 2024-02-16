@@ -11,6 +11,16 @@ import { CareerComponent } from './components/career/career.component';
 import { AboutComponent } from './components/about/about.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
+import { CareerDetailComponent } from './components/career/career-detail/career-detail.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { MatIconModule } from '@angular/material/icon';
+import { ApplyDialogComponent } from './components/career/apply-dialog/apply-dialog.component';
+import { QrcodeDialogComponent } from './components/career/qrcode-dialog/qrcode-dialog.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +31,20 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     AboutComponent,
     LoginComponent,
     SignUpComponent,
+    ForgetPasswordComponent,
+    CareerDetailComponent,
+    ApplyDialogComponent,
+    QrcodeDialogComponent,
   ],
   imports: [
     BrowserModule,
+    MatStepperModule,
+    MatFormFieldModule,
     AppRoutingModule,
+    MatCheckboxModule,
+    FormsModule,
+    NgxSpinnerModule,
+    MatIconModule,
     NgbModule
   ],
   providers: [
