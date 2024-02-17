@@ -1,1 +1,32 @@
-<p>store works!</p>
+<div style="background-color: #F6CDF0;">
+    <div class="container" style="padding: 20px 0;">
+        <p class="banner__title">We Want The Bess Quanlity To You</p>
+    </div>
+</div>
+<div>
+    <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 100" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(246, 205, 240, 1)" offset="0%"></stop><stop stop-color="rgba(246, 205, 240, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,90L30,80C60,70,120,50,180,38.3C240,27,300,23,360,31.7C420,40,480,60,540,66.7C600,73,660,67,720,56.7C780,47,840,33,900,33.3C960,33,1020,47,1080,53.3C1140,60,1200,60,1260,53.3C1320,47,1380,33,1440,36.7C1500,40,1560,60,1620,68.3C1680,77,1740,73,1800,75C1860,77,1920,83,1980,83.3C2040,83,2100,77,2160,76.7C2220,77,2280,83,2340,85C2400,87,2460,83,2520,78.3C2580,73,2640,67,2700,66.7C2760,67,2820,73,2880,75C2940,77,3000,73,3060,63.3C3120,53,3180,37,3240,30C3300,23,3360,27,3420,38.3C3480,50,3540,70,3600,71.7C3660,73,3720,57,3780,55C3840,53,3900,67,3960,73.3C4020,80,4080,80,4140,73.3C4200,67,4260,53,4290,46.7L4320,40L4320,100L4290,100C4260,100,4200,100,4140,100C4080,100,4020,100,3960,100C3900,100,3840,100,3780,100C3720,100,3660,100,3600,100C3540,100,3480,100,3420,100C3360,100,3300,100,3240,100C3180,100,3120,100,3060,100C3000,100,2940,100,2880,100C2820,100,2760,100,2700,100C2640,100,2580,100,2520,100C2460,100,2400,100,2340,100C2280,100,2220,100,2160,100C2100,100,2040,100,1980,100C1920,100,1860,100,1800,100C1740,100,1680,100,1620,100C1560,100,1500,100,1440,100C1380,100,1320,100,1260,100C1200,100,1140,100,1080,100C1020,100,960,100,900,100C840,100,780,100,720,100C660,100,600,100,540,100C480,100,420,100,360,100C300,100,240,100,180,100C120,100,60,100,30,100L0,100Z"></path></svg>
+</div>
+<div class="container">
+    <div class="">
+        <mat-tab-group>
+            <!--All Products-->
+            <mat-tab label="All Product"> 
+                <app-product-card 
+                    [products]="productList">
+                </app-product-card>
+            </mat-tab>
+            <!--Sale Products-->
+            <mat-tab label="Sale"> 
+                <app-product-card 
+                [products]="productList">
+                </app-product-card>    
+            </mat-tab>
+            <!--Best Seller Products-->
+            <mat-tab label="Best seller"> 
+                <app-product-card 
+                    [products]="productList">
+                </app-product-card>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

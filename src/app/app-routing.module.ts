@@ -9,6 +9,9 @@ import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { CareerDetailComponent } from './components/career/career-detail/career-detail.component';
+import { AuthGuard } from './guards/auth.guard';
+import { AccountComponent } from './components/account/account.component';
+import { ProductDetailComponent } from './components/store/product-detail/product-detail.component';
 
 const routes: Routes = [
   { 
@@ -19,9 +22,11 @@ const routes: Routes = [
       { path: 'career', component: CareerComponent }, 
       { path: 'about', component: AboutComponent }, 
       { path: 'login', component: LoginComponent }, 
+      { path: 'account', component: AccountComponent, canActivate: [AuthGuard] }, 
       { path: 'sign-up', component: SignUpComponent }, 
       { path: 'forget-password', component: ForgetPasswordComponent }, 
       { path: 'career/:id', component: CareerDetailComponent },
+      { path: 'product/:id', component: ProductDetailComponent },
     ]
   }
 ];

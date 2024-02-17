@@ -1,0 +1,36 @@
+.product__card{
+    padding: 20px;
+    position: relative;
+}
+.sale{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: flex;
+    padding: 5px;
+    background-color: #0D0C22;
+    color: white;
+    border-radius: 8px;
+}
+.sale p{
+    margin: 0;
+}
+.product__img img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.product__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn-custom{
+    padding: 10px 25px;
+    background-color: #0d0c22;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}

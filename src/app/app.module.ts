@@ -21,6 +21,10 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { MatIconModule } from '@angular/material/icon';
 import { ApplyDialogComponent } from './components/career/apply-dialog/apply-dialog.component';
 import { QrcodeDialogComponent } from './components/career/qrcode-dialog/qrcode-dialog.component';
+import { AccountComponent } from './components/account/account.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { ProductCardComponent } from './components/store/product-card/product-card.component';
+import { ProductDetailComponent } from './components/store/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,9 @@ import { QrcodeDialogComponent } from './components/career/qrcode-dialog/qrcode-
     CareerDetailComponent,
     ApplyDialogComponent,
     QrcodeDialogComponent,
+    AccountComponent,
+    ProductCardComponent,
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +52,7 @@ import { QrcodeDialogComponent } from './components/career/qrcode-dialog/qrcode-
     FormsModule,
     NgxSpinnerModule,
     MatIconModule,
+    MatTabsModule,
     NgbModule
   ],
   providers: [

@@ -15,10 +15,18 @@
           </svg>
         </a>
     
-        <div class="col-md-3 text-end">
+        <div class="col-md-3 text-end" *ngIf="!isLogin">
           <a routerLink="/login" class="login-label">Login</a>
           <a routerLink="/sign-up" class="btn-custom">Sign up</a>
         </div>
+
+        <div class="col-md-3 text-end account-logged" *ngIf="isLogin">
+          <a class="btn-custom" style="margin: 0 10px;" routerLink="/cart">Cart</a>
+          <div class="account-img" routerLink="/account">
+            <img src="https://pics.craiyon.com/2023-07-04/d03a54cd29bb40f898feeb1387f30c7d.webp" alt="avatar">
+          </div>
+        </div>
+
       </header>
     </div>
     

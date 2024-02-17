@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="profile">
+        <div class="profile__img">
+            <img src="https://pics.craiyon.com/2023-07-04/d03a54cd29bb40f898feeb1387f30c7d.webp" alt="profile-image">
+        </div>
+        <div class="profile__content">
+            <h1 style="font-weight: bold;">Vo Thuan Loi</h1>
+            <div style="display: flex; margin-bottom: 10px;">
+                <p style="font-weight: bold; margin-right: 5px;">Your score </p>
+                <p>20</p>
+            </div>
+            <div style="display: flex; align-items: center;">
+                <div class="btn-custom" style="cursor: pointer;" (click)="handleLogout()">
+                    Logout
+                </div>
+                <div class="btn-custom" style="cursor: pointer;">
+                    Edit profile
+                </div>
+                <div class="btn-custom score">
+                    Gold Account
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="margin: 30px 0px;">
+        <mat-tab-group>
+            <!--Orders-->
+            <mat-tab label="Orders"> Content 1 </mat-tab>
+            <!--Checkin-->
+            <mat-tab label="Checkin"> Checkin </mat-tab>
+            <!--Favorites product-->
+            <mat-tab label="Favorites"> 
+                <app-product-card 
+                    [products]="productList">
+                </app-product-card>
+            </mat-tab>
+            <!--Comment product-->
+            <mat-tab label="Commment"> 
+                <app-product-card 
+                    [products]="productList">
+                </app-product-card>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>
