@@ -25,6 +25,7 @@ import { AccountComponent } from './components/account/account.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { ProductCardComponent } from './components/store/product-card/product-card.component';
 import { ProductDetailComponent } from './components/store/product-detail/product-detail.component';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { ProductDetailComponent } from './components/store/product-detail/produc
     NgxSpinnerModule,
     MatIconModule,
     MatTabsModule,
+    MatBadgeModule,
     NgbModule
   ],
   providers: [

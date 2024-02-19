@@ -17,12 +17,7 @@ export class LoginComponent implements OnInit{
   }
 
   handleLogin():void{
-    const isLoginSuccess = this.authService.login(); 
-    
-    if (isLoginSuccess) {
-      this.router.navigate(['/']);
-    } else {
-      this._snackBar.open('Sorry Login Unsuccess', 'Close', { duration: 2000 }); 
-    }
+    this.authService.login(); 
+    this.router.navigate(['/']);
   }
 }

@@ -24,7 +24,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam commodi molestias laborum ad soluta vel, numquam autem, aut quia iusto eligendi, dolor reprehenderit odit harum corporis fugiat quaerat debitis nostrum.
                 </div>
                 <div class="product-btn">
-                    <div class="btn-custom">Add to cart</div>
+                    <div class="btn-custom" (click)="handleAddToCart()">Add to cart</div>
                     <div class="product-quanlity">
                         <button (click)="decrease()">-</button>
                         <input type="number" [(ngModel)]="quantity" min="0">

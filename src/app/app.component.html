@@ -21,7 +21,9 @@
         </div>
 
         <div class="col-md-3 text-end account-logged" *ngIf="isLogin">
-          <a class="btn-custom" style="margin: 0 10px;" routerLink="/cart">Cart</a>
+          <a class="btn-cart" style="margin: 0 20px;" routerLink="/cart">
+            <mat-icon matBadge="{{ cartItemCount }}" matBadgeColor="warn">shopping_basket</mat-icon>
+          </a>
           <div class="account-img" routerLink="/account">
             <img src="https://pics.craiyon.com/2023-07-04/d03a54cd29bb40f898feeb1387f30c7d.webp" alt="avatar">
           </div>

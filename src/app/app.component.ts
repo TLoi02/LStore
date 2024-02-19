@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from './services/authentication.service';
+import { CartService } from './services/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,17 @@ import { AuthenticationService } from './services/authentication.service';
 })
 export class AppComponent implements OnInit{
   isLogin:boolean = true;
+  cartItemCount: number = 0;
 
-  constructor(private authService: AuthenticationService) { }
+  constructor(private authService: AuthenticationService, private cartService : CartService) { }
 
   ngOnInit(): void {
-    this.isLogin = this.authService.isLoggedIn();
+    this.authService.isAuthenticated().subscribe((loggedIn: boolean) => {
+      this.isLogin = loggedIn;
+    });
+
+   
+
   }
 
   

@@ -1,26 +1,29 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
-
+  private loggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(this.isLoggedIn());
+  
   constructor() { }
 
-  login():boolean {
+  login():void {
     //handle call backend to get jwt 
 
     const token = 'generated_jwt_token';
     this.storeTokens(token);
 
     //return type for ui
-    return this.isLoggedIn();
+    this.loggedIn.next(true);
   }
 
   logout():void {
     //handle call backend to remove jwt
     
     this.removeTokens();
+    this.loggedIn.next(false);
   }
 
   private storeTokens(tokens:any):void{
@@ -40,5 +43,9 @@ export class AuthenticationService {
 
   getJwtToken():any{
     return localStorage.getItem("jwtToken");
+  }
+
+  isAuthenticated(): BehaviorSubject<boolean> {
+    return this.loggedIn;
   }
 }
