@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NgxSpinnerService } from 'ngx-spinner';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import QRCode from 'qrcode';
 import { MatDialog } from '@angular/material/dialog';
 import { ApplyDialogComponent } from '../apply-dialog/apply-dialog.component';
 import { QrcodeDialogComponent } from '../qrcode-dialog/qrcode-dialog.component';
+import { Job } from '../../../models/job.model';
+import { CareerService } from '../../../services/career.service';
 
 @Component({
   selector: 'app-career-detail',
@@ -13,10 +14,17 @@ import { QrcodeDialogComponent } from '../qrcode-dialog/qrcode-dialog.component'
   styleUrl: './career-detail.component.scss'
 })
 export class CareerDetailComponent implements OnInit{
-  constructor(private route: ActivatedRoute, private spinner: NgxSpinnerService, private _snackBar:MatSnackBar, private dialog: MatDialog) { }
+  jobDetail : Job | undefined;
+
+  constructor(private route: ActivatedRoute, 
+    private _snackBar:MatSnackBar, 
+    private dialog: MatDialog,
+    private careerService: CareerService) { }
 
   ngOnInit(): void {
-    console.log(this.route.snapshot.paramMap.get('id'))
+    this.jobDetail = this.careerService.getJobDetail(
+      Number(this.route.snapshot.paramMap.get('id'))
+    );
   }
 
   handleCopyLink():void{

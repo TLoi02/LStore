@@ -59,8 +59,8 @@
             <h3 style="text-align: center; font-weight: bold;">Subscribe to our newsletter</h3>
             <div class="d-flex flex-column flex-sm-row w-100 gap-2">
               <label for="newsletter1" class="visually-hidden">Email address</label>
-              <input id="newsletter1" class="footer__input" type="email" placeholder="Email address">
-              <button class="btn-custom" type="button">Subscribe</button>
+              <input id="newsletter1" class="footer__input" type="email" name="email" placeholder="Email address" [(ngModel)]="email">
+              <button class="btn-custom" type="button" (click)="subscribe()">Subscribe</button>
             </div>
           </form>
         </div>

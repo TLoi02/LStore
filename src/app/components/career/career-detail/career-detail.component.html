@@ -7,10 +7,10 @@
         <div class="col-lg-9 col-md-8 col-sm-12">
             <div class="job-content">
                 <div class="job-desc">
-                    Job Details
+                    {{ jobDetail?.workForm }}
                 </div>
                 <div class="job-title">
-                    <h1 style="font-weight: bold;">Product Designer</h1>
+                    <h1 style="font-weight: bold;">{{ jobDetail?.title }}</h1>
                 </div>
                 <div class="share">
                     <div class="share-item" (click)="handleQRCode()">
@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="content">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quo, reiciendis doloremque voluptates in nesciunt hic ducimus soluta blanditiis vero accusamus vel velit placeat expedita exercitationem odio nisi distinctio animi.</p>
+                    <p>{{ jobDetail?.desc }}</p>
                 </div>
             </div>
         </div>
@@ -41,10 +41,10 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png" alt="logo">
                 </div>
                 <div class="job-tag">
-                    <h1 style="font-weight: bold;">Design</h1>
+                    <h1 style="font-weight: bold;">{{ jobDetail?.workForm }}</h1>
                 </div>
                 <div class="job-date">
-                    <p>11/08/2002</p>
+                    <p>{{ jobDetail?.datePost | date:'h:mm a dd/MM/yyyy' }}</p>
                 </div>
                 <div class="btn-custom" (click)="openApplyDialog()">
                     Aplly this position

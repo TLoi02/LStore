@@ -3,28 +3,28 @@
     <div class="row">
         <div class="col-lg-5 col-md-6 col-sm-12">
             <div class="product-img">
-                <img src="https://media.paulsmith.com/dam/products/w_auto,c_scale/q_80/STILL/GRB/GRB-MERC-AXSING-92/GRB-MERC-AXSING-92-0_10.jpg" alt="product-image">
+                <img [src]="productDetail?.image" alt="product-image">
             </div>
         </div>
         <div class="col-lg-7 col-md-6 col-sm-12">
             <div class="product-content">
-                <div class="sale">
+                <div class="sale" *ngIf="productDetail?.salePercent">
                     <p>Sale</p>
-                    <p style="font-weight: bold; margin: 0px 5px;">20</p>
+                    <p style="font-weight: bold; margin: 0px 5px;">{{ productDetail?.salePercent }}</p>
                     <p>%</p>
                 </div>
                 <div class="product-title">
-                    <h1 style="font-weight: bold;">Vo Thuan Loi</h1>
+                    <h1 style="font-weight: bold;">{{ productDetail?.title }}</h1>
                 </div>
                 <div class="product-price">
                     <h3>$</h3>
-                    <h3>2.000</h3>
+                    <h3>{{ productDetail?.price }}</h3>
                 </div>
                 <div class="product-desc">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam commodi molestias laborum ad soluta vel, numquam autem, aut quia iusto eligendi, dolor reprehenderit odit harum corporis fugiat quaerat debitis nostrum.
                 </div>
                 <div class="product-btn">
-                    <div class="btn-custom" (click)="handleAddToCart()">Add to cart</div>
+                    <div class="btn-custom" (click)="handleAddToCart(productDetail!)">Add to cart</div>
                     <div class="product-quanlity">
                         <button (click)="decrease()">-</button>
                         <input type="number" [(ngModel)]="quantity" min="0">
